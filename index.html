@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VÔ DAH FASHION | Mặc đẹp mỗi ngày</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#fff8f5;color:#222}
+header{background:#111;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:5}
+.logo{font-size:24px;font-weight:800;letter-spacing:1px}.cart{background:white;color:#111;padding:9px 14px;border-radius:20px}
+.hero{padding:70px 7%;text-align:center;background:linear-gradient(135deg,#ffe9df,#f8dff0)}
+.hero h1{font-size:44px;margin:0 0 12px}.hero p{font-size:19px}.btn{display:inline-block;background:#111;color:#fff;padding:13px 24px;border-radius:25px;text-decoration:none;margin-top:12px}
+section{padding:45px 7%}h2{text-align:center;font-size:30px;margin-bottom:28px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+.card{background:white;border-radius:18px;padding:22px;text-align:center;box-shadow:0 4px 18px #00000012}.pic{height:170px;border-radius:14px;background:#f0e8e5;display:flex;align-items:center;justify-content:center;font-size:70px;margin-bottom:15px}
+.price{font-size:21px;font-weight:bold;margin:10px}.buy{border:0;background:#111;color:white;padding:10px 18px;border-radius:20px}
+.promo{background:#111;color:#fff;border-radius:22px;padding:30px;text-align:center}.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;text-align:center}
+.step{background:white;padding:20px;border-radius:16px}.num{font-size:30px;font-weight:bold}
+footer{background:#111;color:#fff;text-align:center;padding:28px}
+@media(max-width:600px){.hero h1{font-size:34px}section{padding:35px 5%}}
+</style>
+</head>
+<body>
+<header><div class="logo">VÔ DAH FASHION</div><div class="cart">🛒 Giỏ hàng <span id="count">0</span></div></header>
+<div class="hero"><h1>Mặc đẹp mỗi ngày</h1><p>Đơn giản • Đẹp • Dễ phối</p><p>Thời trang nam dành cho học sinh, sinh viên và người trẻ.</p><a class="btn" href="#sanpham">Xem sản phẩm</a></div>
+<section id="sanpham"><h2>Sản phẩm nổi bật</h2><div class="products">
+<div class="card"><div class="pic">👕</div><h3>Áo thun Basic Cotton</h3><p>Đen • Trắng • Xám</p><div class="price">150.000đ</div><button class="buy" onclick="add()">Thêm vào giỏ</button></div>
+<div class="card"><div class="pic">👔</div><h3>Áo sơ mi Basic</h3><p>Thiết kế hiện đại, dễ phối</p><div class="price">220.000đ</div><button class="buy" onclick="add()">Thêm vào giỏ</button></div>
+<div class="card"><div class="pic">👖</div><h3>Quần jean nam</h3><p>Form trẻ trung, dễ mặc</p><div class="price">290.000đ</div><button class="buy" onclick="add()">Thêm vào giỏ</button></div>
+<div class="card"><div class="pic">🧢</div><h3>Phụ kiện thời trang</h3><p>Đơn giản • Cá tính</p><div class="price">99.000đ</div><button class="buy" onclick="add()">Thêm vào giỏ</button></div>
+</div></section>
+<section><div class="promo"><h2>🎉 MẶC ĐẸP MỖI NGÀY – GIÁ HỢP LÝ</h2><p>Khách mới giảm 10% • Mua 2 sản phẩm giảm thêm • Hỗ trợ phí vận chuyển</p></div></section>
+<section><h2>Quy trình đặt hàng</h2><div class="steps">
+<div class="step"><div class="num">1</div><b>Quảng bá</b><p>Video ngắn & livestream</p></div>
+<div class="step"><div class="num">2</div><b>Tư vấn</b><p>Hỗ trợ size, màu</p></div>
+<div class="step"><div class="num">3</div><b>Chốt đơn</b><p>Xác nhận thông tin</p></div>
+<div class="step"><div class="num">4</div><b>Giao hàng</b><p>Đóng gói & vận chuyển</p></div>
+<div class="step"><div class="num">5</div><b>Sau bán</b><p>Đánh giá & mã giảm giá</p></div>
+</div></section>
+<section><h2>Mô phỏng đơn hàng livestream</h2><div class="promo"><p>Khách: “Chốt 2 áo, size M, màu đen”.</p><p>2 áo × 150.000đ = <b>300.000đ</b> + phí ship.</p><p>Livestream → Chốt đơn → Xác nhận → Đóng gói → Giao hàng → Đánh giá</p></div></section>
+<footer><b>VÔ DAH FASHION</b><br>Mặc đẹp mỗi ngày • Website thương mại điện tử mẫu</footer>
+<script>let n=0;function add(){n++;document.getElementById('count').textContent=n;alert('Đã thêm sản phẩm vào giỏ hàng!')}</script>
+</body></html>
