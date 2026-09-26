@@ -5,193 +5,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VÔ DAH FASHION | Mặc đẹp mỗi ngày</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#fff8f5;color:#222}
-header{background:#111;color:#fff;padding:14px 5%;display:flex;align-items:center;gap:18px;position:sticky;top:0;z-index:10}
-.logo{font-size:23px;font-weight:800;letter-spacing:1px;white-space:nowrap}
-.search{flex:1;max-width:520px;display:flex;background:#fff;border-radius:24px;overflow:hidden}
-.search input{flex:1;border:0;outline:0;padding:12px 16px;font-size:15px}
-.search button{border:0;background:#f1f1f1;padding:0 17px;font-size:18px;cursor:pointer}
-.cart{background:#fff;color:#111;padding:10px 15px;border-radius:22px;white-space:nowrap;cursor:pointer}
-.hero{padding:65px 7%;text-align:center;background:linear-gradient(135deg,#ffe9df,#f8dff0)}
-.hero h1{font-size:44px;margin:0 0 12px}.hero p{font-size:18px}
-.btn{display:inline-block;background:#111;color:#fff;padding:13px 24px;border-radius:25px;text-decoration:none;margin-top:12px}
-section{padding:42px 7%}h2{text-align:center;font-size:30px;margin-bottom:25px}
-.filters{text-align:center;margin-bottom:25px}.filter{border:1px solid #ddd;background:#fff;padding:9px 16px;border-radius:20px;margin:4px;cursor:pointer}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
-.card{background:#fff;border-radius:18px;padding:15px;text-align:center;box-shadow:0 4px 18px #00000012;overflow:hidden}
-.pic{height:230px;border-radius:14px;overflow:hidden;background:#eee;margin-bottom:14px}
-.pic img{width:100%;height:100%;object-fit:cover;display:block}
-.price{font-size:21px;font-weight:bold;margin:10px}.buy{border:0;background:#111;color:#fff;padding:10px 18px;border-radius:20px;cursor:pointer}
-.promo{background:#111;color:#fff;border-radius:22px;padding:30px;text-align:center}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;text-align:center}
-.step{background:#fff;padding:20px;border-radius:16px}.num{font-size:30px;font-weight:bold}
-.modal{display:none;position:fixed;inset:0;background:#0008;z-index:30;align-items:center;justify-content:center;padding:20px}
-.box{background:#fff;width:min(520px,100%);border-radius:20px;padding:25px;max-height:90vh;overflow:auto}
-.close{float:right;border:0;background:#eee;border-radius:50%;width:34px;height:34px;cursor:pointer}
-.form input,.form select{width:100%;padding:12px;margin:7px 0;border:1px solid #ddd;border-radius:10px}
-.pay{width:100%;padding:13px;border:0;border-radius:12px;background:#111;color:#fff;font-size:16px;cursor:pointer;margin-top:10px}
-.empty{text-align:center;padding:15px;color:#666}
-footer{background:#111;color:#fff;text-align:center;padding:28px}
-@media(max-width:700px){header{flex-wrap:wrap}.logo{width:100%;text-align:center}.search{order:2;max-width:none;width:100%}.cart{order:3;margin:auto}.hero h1{font-size:34px}section{padding:35px 5%}}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#fff8f5;color:#222}
+header{background:#111;color:#fff;padding:12px 5%;display:flex;align-items:center;gap:18px;position:sticky;top:0;z-index:10}
+.logo{display:flex;align-items:center;gap:10px;font-size:23px;font-weight:900;letter-spacing:1px;white-space:nowrap}.logo-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#fff,#f2b8d7);color:#111;display:grid;place-items:center;font-weight:900;font-size:17px}
+.logo-name{line-height:1}.logo-name small{display:block;font-size:8px;letter-spacing:3px;opacity:.7;margin-top:3px}
+.search{flex:1;max-width:520px;display:flex;background:#fff;border-radius:24px;overflow:hidden}.search input{flex:1;border:0;outline:0;padding:12px 16px;font-size:15px}.search button{border:0;background:#f1f1f1;padding:0 17px;font-size:18px;cursor:pointer}.cart{background:#fff;color:#111;padding:10px 15px;border-radius:22px;white-space:nowrap;cursor:pointer}
+.hero{padding:65px 7%;text-align:center;background:linear-gradient(135deg,#ffe9df,#f8dff0)}.hero h1{font-size:44px;margin:0 0 12px}.hero p{font-size:18px}.btn{display:inline-block;background:#111;color:#fff;padding:13px 24px;border-radius:25px;text-decoration:none;margin-top:12px}
+section{padding:42px 7%}h2{text-align:center;font-size:30px;margin-bottom:25px}.filters{text-align:center;margin-bottom:25px}.filter{border:1px solid #ddd;background:#fff;padding:9px 16px;border-radius:20px;margin:4px;cursor:pointer}.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}.card{background:#fff;border-radius:18px;padding:15px;text-align:center;box-shadow:0 4px 18px #00000012;overflow:hidden}.pic{height:230px;border-radius:14px;overflow:hidden;background:#eee;margin-bottom:14px}.pic img{width:100%;height:100%;object-fit:cover;display:block}.price{font-size:21px;font-weight:bold;margin:10px}.buy{border:0;background:#111;color:#fff;padding:10px 18px;border-radius:20px;cursor:pointer}.promo{background:#111;color:#fff;border-radius:22px;padding:30px;text-align:center}.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;text-align:center}.step{background:#fff;padding:20px;border-radius:16px}.num{font-size:30px;font-weight:bold}.modal{display:none;position:fixed;inset:0;background:#0008;z-index:30;align-items:center;justify-content:center;padding:20px}.box{background:#fff;width:min(520px,100%);border-radius:20px;padding:25px;max-height:90vh;overflow:auto}.close{float:right;border:0;background:#eee;border-radius:50%;width:34px;height:34px;cursor:pointer}.form input,.form select{width:100%;padding:12px;margin:7px 0;border:1px solid #ddd;border-radius:10px}.pay{width:100%;padding:13px;border:0;border-radius:12px;background:#111;color:#fff;font-size:16px;cursor:pointer;margin-top:10px}.empty{text-align:center;padding:15px;color:#666}footer{background:#111;color:#fff;text-align:center;padding:28px}
+@media(max-width:700px){header{flex-wrap:wrap}.logo{width:100%;justify-content:center}.search{order:2;max-width:none;width:100%}.cart{order:3;margin:auto}.hero h1{font-size:34px}section{padding:35px 5%}}
 </style>
 </head>
 <body>
-
 <header>
-  <div class="logo">VÔ DAH FASHION</div>
-  <div class="search">
-    <input id="searchInput" type="search" placeholder="Tìm kiếm áo, quần, phụ kiện..." oninput="searchProducts()">
-    <button onclick="searchProducts()">🔍</button>
-  </div>
-  <div class="cart" onclick="openCart()">🛒 Giỏ hàng (<span id="count">0</span>)</div>
+<div class="logo"><div class="logo-mark">VD</div><div class="logo-name">VÔ DAH FASHION<small>FASHION STORE</small></div></div>
+<div class="search"><input id="searchInput" type="search" placeholder="Tìm kiếm áo, quần, phụ kiện..." oninput="searchProducts()"><button onclick="searchProducts()">🔍</button></div>
+<div class="cart" onclick="openCart()">🛒 Giỏ hàng (<span id="count">0</span>)</div>
 </header>
 
-<div class="hero">
-  <h1>Mặc đẹp mỗi ngày</h1>
-  <p>Đơn giản • Đẹp • Dễ phối</p>
-  <p>Thời trang nam dành cho học sinh, sinh viên và người trẻ.</p>
-  <a class="btn" href="#sanpham">Xem sản phẩm</a>
+<div class="hero"><h1>VÔ DAH FASHION</h1><p>Mặc đẹp mỗi ngày</p><p>Đơn giản • Đẹp • Dễ phối</p><a class="btn" href="#sanpham">Xem sản phẩm</a></div>
+
+<section id="sanpham"><h2>Sản phẩm thời trang</h2><div class="filters">
+<button class="filter" onclick="filterProducts('all')">Tất cả</button><button class="filter" onclick="filterProducts('ao')">👕 Quần áo</button><button class="filter" onclick="filterProducts('quan')">👖 Quần</button><button class="filter" onclick="filterProducts('phukien')">🧢 Phụ kiện</button>
 </div>
+<div class="products" id="productList">
+<div class="card product" data-category="ao" data-name="áo thun basic cotton"><div class="pic"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85" alt="Áo thun Basic Cotton"></div><h3>Áo thun Basic Cotton</h3><p>Đen • Trắng • Xám</p><div class="price">150.000đ</div><button class="buy" onclick="add('Áo thun Basic Cotton',150000)">Thêm vào giỏ</button></div>
+<div class="card product" data-category="ao" data-name="áo sơ mi basic"><div class="pic"><img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=700&q=85" alt="Áo sơ mi Basic"></div><h3>Áo sơ mi Basic</h3><p>Thiết kế hiện đại, dễ phối</p><div class="price">220.000đ</div><button class="buy" onclick="add('Áo sơ mi Basic',220000)">Thêm vào giỏ</button></div>
+<div class="card product" data-category="quan" data-name="quần jean nam"><div class="pic"><img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=85" alt="Quần jean nam"></div><h3>Quần jean nam</h3><p>Form trẻ trung, dễ mặc</p><div class="price">290.000đ</div><button class="buy" onclick="add('Quần jean nam',290000)">Thêm vào giỏ</button></div>
+<div class="card product" data-category="phukien" data-name="mũ lưỡi trai"><div class="pic"><img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=700&q=85" alt="Mũ lưỡi trai"></div><h3>Mũ lưỡi trai</h3><p>Đơn giản • Cá tính</p><div class="price">99.000đ</div><button class="buy" onclick="add('Mũ lưỡi trai',99000)">Thêm vào giỏ</button></div>
+<div class="card product" data-category="phukien" data-name="túi đeo chéo"><div class="pic"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=85" alt="Túi đeo chéo"></div><h3>Túi đeo chéo</h3><p>Gọn nhẹ • Dễ phối đồ</p><div class="price">129.000đ</div><button class="buy" onclick="add('Túi đeo chéo',129000)">Thêm vào giỏ</button></div>
+<div class="card product" data-category="phukien" data-name="kính thời trang"><div class="pic"><img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=700&q=85" alt="Kính thời trang"></div><h3>Kính thời trang</h3><p>Phong cách trẻ trung</p><div class="price">89.000đ</div><button class="buy" onclick="add('Kính thời trang',89000)">Thêm vào giỏ</button></div>
+</div><div id="noResult" class="empty" style="display:none">Không tìm thấy sản phẩm phù hợp.</div></section>
 
-<section id="sanpham">
-  <h2>Sản phẩm thời trang</h2>
-  <div class="filters">
-    <button class="filter" onclick="filterProducts('all')">Tất cả</button>
-    <button class="filter" onclick="filterProducts('ao')">👕 Quần áo</button>
-    <button class="filter" onclick="filterProducts('quan')">👖 Quần</button>
-    <button class="filter" onclick="filterProducts('phukien')">🧢 Phụ kiện</button>
-  </div>
+<section><div class="promo"><h2>🎉 MẶC ĐẸP MỖI NGÀY – GIÁ HỢP LÝ</h2><p>Khách mới giảm 10% • Mua 2 sản phẩm giảm thêm • Hỗ trợ phí vận chuyển</p></div></section>
+<section><h2>Quy trình đặt hàng</h2><div class="steps"><div class="step"><div class="num">1</div><b>Quảng bá</b><p>Video ngắn & livestream</p></div><div class="step"><div class="num">2</div><b>Tư vấn</b><p>Hỗ trợ size, màu</p></div><div class="step"><div class="num">3</div><b>Chốt đơn</b><p>Xác nhận thông tin</p></div><div class="step"><div class="num">4</div><b>Giao hàng</b><p>Đóng gói & vận chuyển</p></div><div class="step"><div class="num">5</div><b>Sau bán</b><p>Đánh giá & mã giảm giá</p></div></div></section>
 
-  <div class="products" id="productList">
-    <div class="card product" data-category="ao" data-name="áo thun basic cotton">
-      <div class="pic"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85" alt="Áo thun Basic Cotton"></div>
-      <h3>Áo thun Basic Cotton</h3><p>Đen • Trắng • Xám</p><div class="price">150.000đ</div>
-      <button class="buy" onclick="add('Áo thun Basic Cotton',150000)">Thêm vào giỏ</button>
-    </div>
-
-    <div class="card product" data-category="ao" data-name="áo sơ mi basic">
-      <div class="pic"><img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=700&q=85" alt="Áo sơ mi Basic"></div>
-      <h3>Áo sơ mi Basic</h3><p>Thiết kế hiện đại, dễ phối</p><div class="price">220.000đ</div>
-      <button class="buy" onclick="add('Áo sơ mi Basic',220000)">Thêm vào giỏ</button>
-    </div>
-
-    <div class="card product" data-category="quan" data-name="quần jean nam">
-      <div class="pic"><img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=85" alt="Quần jean nam"></div>
-      <h3>Quần jean nam</h3><p>Form trẻ trung, dễ mặc</p><div class="price">290.000đ</div>
-      <button class="buy" onclick="add('Quần jean nam',290000)">Thêm vào giỏ</button>
-    </div>
-
-    <div class="card product" data-category="phukien" data-name="mũ lưỡi trai">
-      <div class="pic"><img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=700&q=85" alt="Mũ lưỡi trai"></div>
-      <h3>Mũ lưỡi trai</h3><p>Đơn giản • Cá tính</p><div class="price">99.000đ</div>
-      <button class="buy" onclick="add('Mũ lưỡi trai',99000)">Thêm vào giỏ</button>
-    </div>
-
-    <div class="card product" data-category="phukien" data-name="túi đeo chéo">
-      <div class="pic"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=85" alt="Túi đeo chéo"></div>
-      <h3>Túi đeo chéo</h3><p>Gọn nhẹ • Dễ phối đồ</p><div class="price">129.000đ</div>
-      <button class="buy" onclick="add('Túi đeo chéo',129000)">Thêm vào giỏ</button>
-    </div>
-
-    <div class="card product" data-category="phukien" data-name="kính thời trang">
-      <div class="pic"><img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=700&q=85" alt="Kính thời trang"></div>
-      <h3>Kính thời trang</h3><p>Phong cách trẻ trung</p><div class="price">89.000đ</div>
-      <button class="buy" onclick="add('Kính thời trang',89000)">Thêm vào giỏ</button>
-    </div>
-  </div>
-  <div id="noResult" class="empty" style="display:none">Không tìm thấy sản phẩm phù hợp.</div>
-</section>
-
-<section><div class="promo">
-  <h2>🎉 MẶC ĐẸP MỖI NGÀY – GIÁ HỢP LÝ</h2>
-  <p>Khách mới giảm 10% • Mua 2 sản phẩm giảm thêm • Hỗ trợ phí vận chuyển</p>
-</div></section>
-
-<section><h2>Quy trình đặt hàng</h2><div class="steps">
-  <div class="step"><div class="num">1</div><b>Quảng bá</b><p>Video ngắn & livestream</p></div>
-  <div class="step"><div class="num">2</div><b>Tư vấn</b><p>Hỗ trợ size, màu</p></div>
-  <div class="step"><div class="num">3</div><b>Chốt đơn</b><p>Xác nhận thông tin</p></div>
-  <div class="step"><div class="num">4</div><b>Giao hàng</b><p>Đóng gói & vận chuyển</p></div>
-  <div class="step"><div class="num">5</div><b>Sau bán</b><p>Đánh giá & mã giảm giá</p></div>
-</div></section>
-
-<div class="modal" id="cartModal">
-  <div class="box">
-    <button class="close" onclick="closeCart()">✕</button>
-    <h2>🛒 Giỏ hàng</h2>
-    <div id="cartItems"></div>
-    <h3>Tổng tiền: <span id="total">0đ</span></h3>
-    <button class="pay" onclick="openPayment()">💳 Tiến hành thanh toán</button>
-  </div>
-</div>
-
-<div class="modal" id="paymentModal">
-  <div class="box">
-    <button class="close" onclick="closePayment()">✕</button>
-    <h2>💳 Thanh toán</h2>
-    <div class="form">
-      <input id="customerName" placeholder="Họ và tên">
-      <input id="phone" placeholder="Số điện thoại">
-      <input id="address" placeholder="Địa chỉ nhận hàng">
-      <select id="paymentMethod">
-        <option>💵 Thanh toán khi nhận hàng (COD)</option>
-        <option>🏦 Chuyển khoản ngân hàng</option>
-        <option>📱 Ví điện tử</option>
-      </select>
-    </div>
-    <p><b>Tổng thanh toán: <span id="paymentTotal">0đ</span></b></p>
-    <button class="pay" onclick="confirmPayment()">✅ Xác nhận đặt hàng</button>
-  </div>
-</div>
-
+<div class="modal" id="cartModal"><div class="box"><button class="close" onclick="closeCart()">✕</button><h2>🛒 Giỏ hàng</h2><div id="cartItems"></div><h3>Tổng tiền: <span id="total">0đ</span></h3><button class="pay" onclick="openPayment()">💳 Tiến hành thanh toán</button></div></div>
+<div class="modal" id="paymentModal"><div class="box"><button class="close" onclick="closePayment()">✕</button><h2>💳 Thanh toán</h2><div class="form"><input id="customerName" placeholder="Họ và tên"><input id="phone" placeholder="Số điện thoại"><input id="address" placeholder="Địa chỉ nhận hàng"><select id="paymentMethod"><option>💵 Thanh toán khi nhận hàng (COD)</option><option>🏦 Chuyển khoản ngân hàng</option><option>📱 Ví điện tử</option></select></div><p><b>Tổng thanh toán: <span id="paymentTotal">0đ</span></b></p><button class="pay" onclick="confirmPayment()">✅ Xác nhận đặt hàng</button></div></div>
 <footer><b>VÔ DAH FASHION</b><br>Mặc đẹp mỗi ngày • Website thương mại điện tử mẫu</footer>
 
 <script>
-let cart=[];
-function money(n){return n.toLocaleString('vi-VN')+'đ'}
-function add(name,price){cart.push({name,price});document.getElementById('count').textContent=cart.length;alert('Đã thêm '+name+' vào giỏ hàng!')}
-function openCart(){
-  renderCart();document.getElementById('cartModal').style.display='flex'
-}
-function closeCart(){document.getElementById('cartModal').style.display='none'}
-function renderCart(){
-  const box=document.getElementById('cartItems');
-  if(!cart.length){box.innerHTML='<div class="empty">Giỏ hàng đang trống.</div>';document.getElementById('total').textContent='0đ';return}
-  box.innerHTML=cart.map((x,i)=>'<p>'+ (i+1)+'. '+x.name+' — <b>'+money(x.price)+'</b></p>').join('');
-  document.getElementById('total').textContent=money(cart.reduce((s,x)=>s+x.price,0))
-}
-function openPayment(){
-  if(!cart.length){alert('Vui lòng thêm sản phẩm vào giỏ hàng trước.');return}
-  document.getElementById('paymentTotal').textContent=money(cart.reduce((s,x)=>s+x.price,0));
-  closeCart();document.getElementById('paymentModal').style.display='flex'
-}
-function closePayment(){document.getElementById('paymentModal').style.display='none'}
-function confirmPayment(){
-  if(!document.getElementById('customerName').value || !document.getElementById('phone').value || !document.getElementById('address').value){
-    alert('Vui lòng nhập đầy đủ họ tên, số điện thoại và địa chỉ.');return
-  }
-  alert('Đặt hàng thành công! Cảm ơn bạn đã mua hàng tại VÔ DAH FASHION.');
-  cart=[];document.getElementById('count').textContent='0';closePayment()
-}
-function searchProducts(){
-  const q=document.getElementById('searchInput').value.toLowerCase().trim();
-  let found=0;
-  document.querySelectorAll('.product').forEach(p=>{
-    const ok=p.dataset.name.includes(q);
-    p.style.display=ok?'block':'none';if(ok)found++
-  });
-  document.getElementById('noResult').style.display=found?'none':'block'
-}
-function filterProducts(cat){
-  let found=0;
-  document.getElementById('searchInput').value='';
-  document.querySelectorAll('.product').forEach(p=>{
-    const ok=cat==='all'||p.dataset.category===cat;
-    p.style.display=ok?'block':'none';if(ok)found++
-  });
-  document.getElementById('noResult').style.display=found?'none':'block'
-}
+let cart=[];function money(n){return n.toLocaleString('vi-VN')+'đ'}function add(name,price){cart.push({name,price});document.getElementById('count').textContent=cart.length;alert('Đã thêm '+name+' vào giỏ hàng!')}
+function openCart(){renderCart();document.getElementById('cartModal').style.display='flex'}function closeCart(){document.getElementById('cartModal').style.display='none'}
+function renderCart(){const box=document.getElementById('cartItems');if(!cart.length){box.innerHTML='<div class="empty">Giỏ hàng đang trống.</div>';document.getElementById('total').textContent='0đ';return}box.innerHTML=cart.map((x,i)=>'<p>'+(i+1)+'. '+x.name+' — <b>'+money(x.price)+'</b></p>').join('');document.getElementById('total').textContent=money(cart.reduce((s,x)=>s+x.price,0))}
+function openPayment(){if(!cart.length){alert('Vui lòng thêm sản phẩm vào giỏ hàng trước.');return}document.getElementById('paymentTotal').textContent=money(cart.reduce((s,x)=>s+x.price,0));closeCart();document.getElementById('paymentModal').style.display='flex'}function closePayment(){document.getElementById('paymentModal').style.display='none'}
+function confirmPayment(){if(!document.getElementById('customerName').value||!document.getElementById('phone').value||!document.getElementById('address').value){alert('Vui lòng nhập đầy đủ họ tên, số điện thoại và địa chỉ.');return}alert('Đặt hàng thành công! Cảm ơn bạn đã mua hàng tại VÔ DAH FASHION.');cart=[];document.getElementById('count').textContent='0';closePayment()}
+function searchProducts(){const q=document.getElementById('searchInput').value.toLowerCase().trim();let found=0;document.querySelectorAll('.product').forEach(p=>{const ok=p.dataset.name.includes(q);p.style.display=ok?'block':'none';if(ok)found++});document.getElementById('noResult').style.display=found?'none':'block'}
+function filterProducts(cat){let found=0;document.getElementById('searchInput').value='';document.querySelectorAll('.product').forEach(p=>{const ok=cat==='all'||p.dataset.category===cat;p.style.display=ok?'block':'none';if(ok)found++});document.getElementById('noResult').style.display=found?'none':'block'}
 </script>
 </body>
 </html>
